@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="noteDAO">
+
+    <select id="getNoteList" resultType="note"  parameterType="int">
+        <![CDATA[
+        SELECT *
+        FROM note
+        WHERE projNo = #{projNo}
+        ORDER BY noteorder
+    ]]>
+    </select>
+
+
+    <insert id="addNote" parameterType="board" >
+        insert into note(notetitle,startday,endday,notecontent,charger,boardno,projno) values('내용','2000-01-01', '2100-01-01',null,'김아무개',#{boardNo},#{projNo})
+    </insert>
+
+    <delete id="deleteNote" parameterType="int">
+        delete from note where noteno = #{noteNo}
+    </delete>
+
+
+    <update id="updateNote" parameterType="note">
+        update note set notetitle = #{noteTitle} , startday = #{startDay}, endday = #{endDay}, charger=#{charger}  where noteno = #{noteNo}
+    </update>
+
+
+    <update id="moveNoteUpBoard" parameterType="note">
+        update note
+        set noteorder = noteorder - 11
+        where noteno = #{noteNo}
+    </update>
+
+    <update id="moveNoteDownBoard" parameterType="note">
+        update note
+        set noteorder = noteorder + 11
+        where noteno = #{noteNo}
+    </update>
+
+
+    <update id="moveNoteRightBoard" parameterType="note">
+        <![CDATA[
+        UPDATE note
+        SET boardNo = boardNo + 1
+        WHERE noteNo = #{noteNo} AND (boardNo + 1, projNo) IN (SELECT boardNo, projNo FROM Board)
+        ]]>
+    </update>
+
+
+    <update id="moveNoteLeftBoard" parameterType="note">
+        <![CDATA[
+        UPDATE note
+        SET boardNo = boardNo - 1
+        WHERE noteNo = #{noteNo} AND (boardNo - 1, projNo) IN (SELECT boardNo, projNo FROM Board)
+        ]]>
+    </update>
+</mapper>

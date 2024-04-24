@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<!-- Alias 설정 -->
+	<!-- 모델을 패키지로 잡아서 DTO는 Alias Annotation 사용 -->
+	<typeAliases>
+		<package name="com.kosa.tikitaka.model" />
+	</typeAliases>
+
+
+</configuration>

@@ -1,0 +1,47 @@
+body {
+	padding: 10px;
+}
+/* 캘린더 위의 해더 스타일(날짜가 있는 부분) */
+.fc-header-toolbar {
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-bottom: 40px;
+}
+.calendar-container {
+	margin-top: 10px;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	height: 750px;
+}
+.fc-day a {
+	color: black;
+	text-decoration: none;
+}
+.fc-day-sun a {
+	color: red;
+	text-decoration: none;
+}
+.fc-day-sat a {
+	color: blue;
+	text-decoration: none;
+}
+.addsch {
+	float: right;
+}
+
+.title-section{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.schedule-title {
+	width: 92%;
+	padding-left: 10px;
+}
+
+.addsection {
+	padding-top: 20px;
+	margin-right: 80px;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DocDAO">
+
+	<select id="getAllDocs" resultType="docPage">
+		SELECT * FROM DOCPAGE order by UPDATEDATE desc
+	</select>
+
+	<select id="getDocByNO" parameterType="int" resultType="docPage">
+		SELECT * FROM DOCPAGE WHERE DOCPAGENO = #{docPageNo}
+	</select>
+
+	<insert id="addDoc" parameterType="docPage">
+    INSERT INTO DocPage (docTitle, docContent, updateDate, projNo)
+    VALUES (#{docTitle}, #{docContent}, SYSDATE, 82)
+	</insert>
+
+	<update id="updateDoc" parameterType="docPage">
+		UPDATE DOCPAGE 
+		SET DOCTITLE = #{docTitle},
+			DOCCONTENT = #{docContent},
+			UPDATEDATE = SYSDATE,
+			PROJNO = 82
+		where DOCPAGENO = #{docPageNo}
+	</update>
+
+	<delete id="deleteDoc" parameterType="java.lang.Integer">
+		delete from DOCPAGE where DOCPAGENO = #{docPageNo}
+	</delete>
+
+</mapper>

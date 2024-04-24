@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.layout_container {
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	height: 100vh;
+}
+
+.layout_body {
+	display: grid;
+	grid-template-rows:70px 10fr;
+}
+
+.layout_header {
+	max-height: 70px;
+}

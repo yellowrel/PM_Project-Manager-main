@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+					"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="projectDAO">
+	<select id="getProjectList" resultType="project">
+		<![CDATA[
+			select * from project
+		]]>
+	</select>
+	
+	<select id="selectByNo" resultType="project" parameterType="int">
+		select projNo, projName, inviteCode, detailedDescription from project where projNo = #{projNo}
+	</select>
+	
+	<insert id="insertProject" parameterType="project">
+		<![CDATA[
+        INSERT INTO Project (projName, inviteCode, detailedDescription)
+        VALUES (#{projName}, #{inviteCode}, #{detailedDescription})
+	    ]]>
+	</insert>
+	
+	<select id="selectCurrval" resultType="java.lang.Integer">
+		<![CDATA[
+			SELECT MAX(projNo) FROM project
+		]]>
+	</select> 
+	
+	<select id="selectByProjNo" parameterType="java.lang.Integer" resultType="project">
+		select * from project where projNo = #{projNo}
+	</select>
+	
+	
+	
+	
+	<delete id="deleteProject" parameterType="project">
+	<![CDATA[
+	 {call
+        declare
+        begin
+	delete from schedule where projNo = #{projNo};
+	delete from note where projNo = #{projNo};
+	delete from board where projNo = #{projNo};
+	delete from docpage where projNo = #{projNo};
+	delete from upm where projNo = #{projNo};
+    DELETE FROM PROJECT WHERE PROJNO = #{projNo};
+        end
+    }
+	    ]]>
+</delete>
+	
+	<update id="updateProject" parameterType="project">
+		<![CDATA[
+		UPDATE project SET
+		projName = #{projName},
+		detailedDescription = #{detailedDescription}
+		where projNo = #{projNo}
+		 ]]>
+	</update>
+	
+		<select id="searchList" parameterType="String" resultType="project">
+			<![CDATA[
+		SELECT * FROM project WHERE projname LIKE '%' || #{searchProject} ||'%'
+		 ]]>
+		</select>
+		
+		<select id="searchList2" parameterType="String" resultType="project">
+			<![CDATA[
+		SELECT * FROM project WHERE projname LIKE '%' || #{searchProject} ||'%'
+		 ]]>
+		</select>
+		
+		
+		
+		<select id="enterProject" parameterType="project">
+		<![CDATA[
+		select projNo, inviteCode  from project where projNo = #{projNo} 
+		 ]]>
+		 </select>
+		 
+		 <select id="invitationProject" parameterType="project">
+		 	<![CDATA[
+		 	SELECT * FROM project WHERE projname LIKE %a% 
+		 ]]>
+		 </select>
+	
+</mapper>

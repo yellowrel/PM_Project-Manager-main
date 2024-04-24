@@ -1,0 +1,659 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+img{
+  width: 100px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.8rem;
+  color: #222;
+  letter-spacing: 0.1px;
+}
+
+h1{
+  font-size: 2.5rem;
+  color: white;
+}
+
+h2{
+  font-size: 1.5rem;
+}
+
+h3{
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 2rem;
+  color: #222;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+p{
+  font-size: 0.8rem;
+}
+
+small{
+  font-size: 0.6rem;
+  font-weight: 100;
+  color: #555;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  background-color: #212529;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 1px;
+}
+
+button:hover {
+  background: none;
+  border: 1px solid #212529;;
+  color: #212529;
+}
+
+.findid> div> button,
+.findpw> div> button{
+  margin-bottom: 10px;
+}
+
+a:link{color: #222; text-decoration: none;}
+a:visited{color: #222;}
+
+
+/* start */
+
+.login,
+.findid,
+.findpw,
+.join,
+.join2,
+.join3,
+.joinend{
+  width: 360px;
+  margin: 3rem auto;
+  border: 1px solid silver;
+}
+
+.login> div,
+.findid> div,
+.findpw> div,
+.join> div,
+.join2> div,
+.join3> div,
+.joinend> div{
+  padding: 2rem 10%;
+}
+
+.login> div> h2,
+.findid> div> h2,
+.findpw> div> h2,
+.join> div> h2,
+.join2> div> h2,
+.join3> div> h2,
+.joinend> div> h2{
+  text-align: center;
+}
+
+.login> div> :nth-child(2),
+.findid> div> :nth-child(2),
+.findpw> div> :nth-child(2),
+.join> div> :nth-child(2),
+.join2> div> :nth-child(2),
+.join3> div> :nth-child(2),
+.joinend> div> :nth-child(2){
+  padding: 2rem 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login> div> :nth-child(2) a:link,
+.login> div> :nth-child(2) a:visited,
+.findid> div> :nth-child(2) a:link,
+.findid> div> :nth-child(2) a:visited,
+.join> div> :nth-child(2) a:link,
+.join> div> :nth-child(2) a:visited,
+.join2> div> :nth-child(2) a:link,
+.join2> div> :nth-child(2) a:visited,
+.join3> div> :nth-child(2) a:link,
+.join3> div> :nth-child(2) a:visited,
+.joinend> div> :nth-child(2) a:link,
+.joinend> div> :nth-child(2) a:visited{
+  width: 100%;
+  height: 40px;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 3px solid #212529;
+  color: #999;
+
+}
+
+.login> div> :nth-child(2)> :nth-child(1):link,
+.login> div> :nth-child(2)> :nth-child(1):visited,
+.findid> div> :nth-child(2)> :nth-child(1):link,
+.findid> div> :nth-child(2)> :nth-child(1):visited,
+.join> div> :nth-child(2)> :nth-child(1):link,
+.join> div> :nth-child(2)> :nth-child(1):visited,
+.join2> div> :nth-child(2)> :nth-child(2):link,
+.join2> div> :nth-child(2)> :nth-child(2):visited,
+.join3> div> :nth-child(2)> :nth-child(3):link,
+.join3> div> :nth-child(2)> :nth-child(3):visited,
+.joinend> div> :nth-child(2)> :nth-child(4):link,
+.joinend> div> :nth-child(2)> :nth-child(4):visited{
+  border-bottom: 3px solid #212529;;
+}
+
+.login> div> :nth-child(3)> div{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.login> div> :nth-child(3)> div img{
+  width: 20px;
+  height: 20px;
+  margin-top: 0.3rem;
+}
+
+.login> div> :nth-child(3)> div input{
+  width: 250px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  border-bottom: 1.5px solid #ddd;
+}
+
+.login> div> :nth-child(3)> :nth-child(2)> :nth-child(2){
+  margin-bottom: 1.8rem;
+}
+
+.login> div> :nth-child(5){
+  display: flex;
+  justify-content: center;
+  padding: 1.3rem 0;
+  font-weight: bold;
+}
+
+/* .login> div> :nth-child(5)> :nth-child(1)::after,
+.login> div> :nth-child(5)> :nth-child(2)::after{
+  content: "|";
+} */
+
+.login> div> :nth-child(5) input{
+  cursor: pointer;
+}
+
+.login> div> :nth-child(6)> div{
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  transition: 0.5s;
+}
+
+.login> div> :nth-child(6)> div:hover{
+  border: 1px solid #212529;
+}
+
+.login> div> :nth-child(6)> div a{
+  display: flex;
+  padding: 0.5rem 2.6rem;
+}
+
+.login> div> :nth-child(6)> div a h4{
+  padding-top: 0.1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.login> div> :nth-child(6)> div a img{
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.findid> div> :nth-child(3)> input{
+  width: 100%;
+  height: 50px;
+  padding: 0.7rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  color: #999;
+  cursor: pointer;
+}
+
+.findid> div> :nth-child(3)> div{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.findid> div> :nth-child(3)> div select{
+  width: 90px;
+  height: 42px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  color: #999;
+  cursor: pointer;
+}
+
+.findid> div> :nth-child(3)> div> :nth-child(2){
+  width: 90px;
+  color: #999;
+  cursor: pointer;
+}
+
+.findid> div> :nth-child(3)> div input{
+  width: 90px;
+  height: 42px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.findpw> div> :nth-child(2) a:link,
+.findpw> div> :nth-child(2) a:visited{
+  width: 288px;
+  height: 40px;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 3px solid #212529;
+  color: #999;
+}
+
+.findpw> div> :nth-child(2)> :nth-child(2):link,
+.findpw> div> :nth-child(2)> :nth-child(2):visited{
+  color: #c80a1e;
+  border-bottom: 3px solid #c80a1e;
+}
+
+.findpw> div> :nth-child(3){
+  margin-bottom: 15px;
+}
+
+.findpw> div> :nth-child(3) li{
+  list-style: none;
+  font-size: 0.6rem;
+}
+
+.findpw> div> :nth-child(4)> input,
+.join3> div> :nth-child(4)> input,
+.join3> div> :nth-child(5)> :nth-child(1){
+  width: 100%;
+  height: 50px;
+  padding: 0.3rem;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.findpw> div> :nth-child(4)> div,
+.join3> div> :nth-child(5)> div{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.findpw> div> :nth-child(4)> div h5,
+.join3> div> :nth-child(3)> div h5{
+  padding: 0.5rem 0.1rem 0 0.1rem;
+  font-size: 0.8rem;
+}
+
+.findpw> div> :nth-child(4)> div> input,
+.join3> div> :nth-child(3)> div> input{
+  width: 100%;
+  height: 42px;
+  padding: 0.3rem;
+  color: #999;
+  font-size: 0.85rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-right: 3px;
+}
+
+.findpw> div> :nth-child(4)> div> :nth-child(3),
+.join3> div> :nth-child(3)>div> :nth-child(3){
+  width: 80px;
+  color: #999;
+}
+
+.findpw> div> :nth-child(4)> div select,
+.join3> div> :nth-child(3)> div select{
+  width: 90px;
+  height: 42px;
+  padding: 0.2rem;
+  font-size: 0.75rem;
+  border: 1px solid #ccc;
+  color: #999;
+  cursor: pointer;
+}
+
+.findpw> div> :nth-child(5){
+  margin-bottom: 15px;
+}
+
+.findpw> div> :nth-child(5)> div{
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.findpw> div> :nth-child(5)> div> input{
+  padding: 0.2rem 0;
+  cursor: pointer;
+}
+
+.findpw> div> :nth-child(6) span,
+.join span{
+  font-size: 0.7rem;
+  font-weight: lighter;
+}
+
+.join> div> :nth-child(3),
+.joinend> div> :nth-child(3){
+  padding: 1.5rem 0 2.2rem 0;
+  text-align: center;
+}
+
+.join> div> :nth-child(3) h2,
+.joinend> div> :nth-child(3) h2{
+  margin-bottom: 15px;
+}
+
+.join> div> :nth-child(4){
+  margin-bottom: 25px;
+}
+
+.join> div> :nth-child(5)> div{
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  transition: 0.5s;
+}
+
+.join> div> :nth-child(5)> div:hover{
+  border: 1px solid #c80a1e;
+}
+
+.join> div> :nth-child(5)> div a{
+  display: flex;
+  padding: 0.5rem 2.6rem;
+}
+
+.join> div> :nth-child(5)> div a h4{
+  padding-top: 0.1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.join> div> :nth-child(5)> div a img{
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.join> div> :nth-child(6){
+  margin: 20px 0 10px 0;
+  text-align: center;
+}
+
+.join2> div> :nth-child(3){
+  padding: 1.5rem 0 0 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #c80a1e;
+}
+
+.join2> div h4{
+  padding: 2rem 0 1rem 0;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  color: #222;
+}
+
+.join2> div> :nth-child(4)> div,
+.join2> div> :nth-child(5)> div{
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.join2> div> :nth-child(4) div a,
+.join2> div> :nth-child(5) div a{
+  padding: 0.1rem 0.4rem;
+  border: 1px solid #ddd;
+}
+
+.join2> div> :nth-child(6){
+  padding: 2rem 0;
+}
+
+.join2> div> :nth-child(6) small{
+  color: #c80a1e;
+}
+
+.join2> div> :nth-child(6) p{
+  font-weight: bold;
+  padding-top: 0.9rem;
+}
+
+.join2> div> :nth-child(7),
+.join3> div> :nth-child(9)> div,
+.join3> div> :nth-child(10)> div,
+.join3> div> :nth-child(12),
+.joinend> div> :nth-child(4){
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.join2> div> :nth-child(7)> :nth-child(1),
+.join3> div> :nth-child(11)> div button,
+.join3> div> :nth-child(12)> :nth-child(1),
+.joinend> div> :nth-child(4) :nth-child(1){
+  margin-right: 10px;
+  background: #444;
+  color: white;
+  border: 1px solid #444;
+}
+
+.join2> div> :nth-child(7)> :nth-child(1):hover,
+.join3> div> :nth-child(11)> div button:hover,
+.join3> div> :nth-child(12)> :nth-child(1):hover,
+.joinend> div> :nth-child(4) :nth-child(1):hover{
+  background: none;
+  color: #444;
+}
+
+.join3> div> :nth-child(3)> div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.join3> div> :nth-child(3)> :nth-child(2){
+  text-align: right;
+  color: #212529;
+  margin: 0.5rem 0 1.2rem 0;
+}
+
+.join3> div> :nth-child(4)> div{
+  text-align: right;
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+.join3> div> :nth-child(5)> :nth-child(2)> :nth-child(1){
+  width: 80px;
+  height: 42px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.join3> div> :nth-child(5)> :nth-child(2)> :nth-child(2),
+.join3> div> :nth-child(5)> :nth-child(2)> :nth-child(3){
+  width: 50px;
+  height: 42px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.join3> div> :nth-child(5)> :nth-child(2) label{
+  padding-top: 0.7rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.join3> div> :nth-child(6){
+  width: 100%;
+}
+
+.join3> div> :nth-child(6)> div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.join3> div> :nth-child(6)> div select{
+width: 90px;
+  height: 42px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.join3> div> :nth-child(6)> div input{
+width: 90px;
+  height: 42px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 0.85rem;
+}
+
+.join3> div> :nth-child(7){
+  text-align: right;
+  color: #212529;
+  text-decoration: underline;
+  margin: 0.5rem 0 1.2rem 0;
+}
+
+.join3> div> h4{
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: bold;
+  color: #212529;
+}
+
+.join3> div> :nth-child(9)> div label,
+.join3> div> :nth-child(10)> div label{
+  padding-top: 0.7rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.join3> div> :nth-child(9)> div> :nth-child(3),
+.join3> div> :nth-child(10)> div> :nth-child(3){
+  width: 80px;
+  height: 42px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.join3> div> :nth-child(9)> div> :nth-child(4),
+.join3> div> :nth-child(9)> div> :nth-child(5){
+  width: 50px;
+  height: 42px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.join3> div> :nth-child(11){
+  margin-bottom: 2rem;
+}
+
+.join3> div> :nth-child(11)> div{
+  height: 42px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.join3> div> :nth-child(11)> :nth-child(1) input{
+  width: 180px;
+  padding-left: 0.3rem;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+.join3> div> :nth-child(11)> :nth-child(2) input{
+  width: 139px;
+  padding-left: 0.3rem;
+  border: 1px solid #ccc;
+}
+
+.join3> div> :nth-child(11)> div button{
+  margin: 0;
+}
+
+.postSearch{
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.postSearch1{
+  border: 1px solid #ccc;
+  width: 287px;
+ padding: 10px;
+ margin-bottom: 10px;
+  
+}
+.postSearch2{
+  border: 1px solid #ccc;
+  width: 287px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.postButton{
+	width : 100px;
+}
+.findPwd{
+	width: 49.5% !important;
+}
+.ok{
+	width: 100%;
+}
+.id{
+  margin-bottom: 10px;
+}

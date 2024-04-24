@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="chatService">
+	<insert id="insertChatRoom" parameterType="chatRoom">
+		insert into chatRoom values (#{chatRoomNo},#{chatRoomName})
+	</insert>
+	<select id="selectChatUser" resultType="chatUser">
+		select * from chatUser where userId = #{userId} and chatRoomNo = #{chatRoomNo}
+	</select>
+	<insert id="insertChatUser" parameterType="chatUser">
+		insert into chatUser values (#{userId}, sysdate, #{chatRoomNo})
+	</insert>
+	<insert id="insertMsg" parameterType="chat">
+		insert into chat(messageType, message, createdAt, chatRoomNo, userId) values (#{messageType}, #{message}, sysdate, #{chatRoomNo}, #{userId})
+	</insert>
+	<select id="selectByChatRoom" resultType="chat">
+		select * from chat where chatRoomNo = #{chatRoomNo}
+	</select>
+	<select id="selectById" resultType="chatRoom">
+		select * from chatRoom where chatRoomNo = #{roomId}
+	</select>
+	<select id="selectByUserIdAndChatRoom" resultType="chatUser">
+		select * from chatUser where userId = #{userId} and chatRoomNo = #{chatRoomNo}
+	</select>
+</mapper>

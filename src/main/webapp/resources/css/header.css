@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+*{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.header_container {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	border-bottom-color: #212529;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+.logo {
+	height: 50px;
+}
+
+.header_menu {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+	max-width: 60%;
+	align-items: center;
+}
+
+.header_menu div {
+	width: 7em;
+	margin-right: 10px;
+}
+
+.header_menu a {
+	display: flex;
+  	align-items: center;
+  	cursor: pointer;
+}
+
+.header_invite {
+	margin-top: 10px;
+	margin-right: 10px;	
+}
+
+.header_invite a {
+	display: flex;
+  	align-items: center;
+  	cursor: pointer;
+}
+
+.material-symbols-outlined {
+	margin-right: 5px;
+}
+
+.modal-body input{
+	width: 80%;
+}

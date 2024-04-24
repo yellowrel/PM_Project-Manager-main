@@ -1,0 +1,73 @@
+@charset "UTF-8";
+* {
+	font-family: Roboto;
+}
+/* .editButton .deleteButton {
+	display: none;
+} */
+.doc_container {
+	display: grid;
+	grid-template-rows: 50px 1fr;
+	gap: 10px;
+	padding: 20px;
+	height: 92vh;
+	overflow: auto;
+}
+
+.doc_content {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	gap: 10px;
+}
+
+.doc_header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.doc_name p {
+	margin-top: 10px;
+	font-size: larger;
+	font-weight: 600;
+}
+
+.doc_main {
+	display: grid;
+	grid-template-rows: 0.5fr 7.5fr 0.5fr;
+	gap: 10px;
+}
+
+.doc_title {
+	display: flex;
+	background-color: #fff;
+	padding: 10px;
+	justify-content: space-between;
+}
+
+.doc_text {
+	background-color: #fff;
+	padding: 10px;
+	overflow: auto;
+	height: 580px;
+}
+
+.doc_btnWrap {
+	direction: rtl;
+	padding-top: 10px;
+}
+
+.list-group-item:hover {
+	cursor: pointer;
+	background-color: #0f0f0f;
+	color: #ffffff;
+}
+
+.list-group-item.active, .list-group-item:focus, .list-group-item:hover {
+    background-color: #000 !important; 
+    border-color: #000 !important;
+    color: #fff !important;
+}
+
+.ck.ck-editor {
+	max-width: 95%;
+}

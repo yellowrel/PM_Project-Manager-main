@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="scheduleService">
+
+	<select id="calendarList" resultType="schedule">
+		SELECT scheduleno, scheduletitle, startday, endday+1 as "ENDDAY", PROJNO 
+		FROM SCHEDULE
+	</select>
+
+	<insert id="insertSchedule" parameterType="schedule">
+		INSERT INTO SCHEDULE
+		(SCHEDULETITLE, STARTDAY, ENDDAY, PROJNO)
+		values(
+		#{scheduleTitle},
+		#{startDay}, #{endDay}, 82)
+	</insert>
+
+	<update id="updateSchedule" parameterType="schedule">
+		UPDATE SCHEDULE SET
+		SCHEDULETITLE = #{scheduleTitle},
+		STARTDAY = #{startDay},
+		ENDDAY = #{endDay}
+		where SCHEDULENO = #{scheduleNo}
+	</update>
+	<delete id="deleteSchedule" parameterType="java.lang.Integer">
+		DELETE FROM SCHEDULE WHERE SCHEDULENO = #{scheduleNo}
+	</delete>
+</mapper>
