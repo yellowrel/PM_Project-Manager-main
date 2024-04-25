@@ -3,6 +3,8 @@
 활용 기술:
 Java 11 / Spring FrameWork / Maven / Oracle Database/ Oracle SQL / AWS / WebRTC
 
+전자정보프레임워크/Spring 학습과 Api활용에 중점을 두었습니다.
+
 🔍담당업무:
 
         - 칸반보드
